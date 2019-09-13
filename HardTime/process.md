@@ -26,6 +26,12 @@
 
 第三阶段：配置虚拟主机，目标是本地通过www.bo.com就能访问项目
 
+​	测试完了问题1中的开机密码修改之后发现Apache启动后有问题，具体报错如下：
+
+![image-20190708171945878](/Users/zhuyanfu/Library/Application Support/typora-user-images/image-20190708171945878.png)
+
+​	我怀疑是因为中间更改过密码，所以Apache有这么一套保护机制，那就按照他说的做，到httpd.conf中查找ServerName关键字，添加一下ServerName localhost:80这段
+
 第四阶段：成功安装数据库，跑一个小demo来测试，也可以用GitHub上的相关项目(那个laravel5.5)
 
 第五阶段：做草图，搞一个系统而小的项目需求
